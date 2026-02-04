@@ -5,7 +5,7 @@ const letter = document.getElementById("letter-container");
 const noBtn = document.querySelector(".no-btn");
 const yesBtn = document.querySelector(".btn[alt='Yes']");
 const title = document.getElementById("letter-title");
-const catImg = document.getElementById("letter-cat");
+const catImg = document.getElementById("letter-dog");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
