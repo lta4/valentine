@@ -9,6 +9,8 @@ const dogImg = document.getElementById("letter-dog");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
+// const confetti-btn = document.getElementById("confetti-btn");
+
 // Click Envelope
 
 envelope.addEventListener("click", () => {
@@ -70,3 +72,33 @@ yesBtn.addEventListener("click", () => {
 
     finalText.style.display = "block";
 })
+
+document.getElementById('confetti-btn').addEventListener('click', () => {
+    createConfetti(event.clientX, event.clientY);
+});
+
+function createConfetti(x, y) {
+    const colors = ["#ff5252", "#ffeb3b", "#4caf50", "#03a9f4", "#e91e63"];
+    const container = document.getElementById('confetti-container');
+
+    for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.top = `${y}px`;
+        confetti.style.left = `${x}px`;
+
+        // Set random direction for the burst
+        const xDirection = (Math.random() - 0.5) * 400; // Adjust spread
+        const yDirection = (Math.random() - 0.5) * 400;
+        confetti.style.setProperty('--x', `${xDirection}px`);
+        confetti.style.setProperty('--y', `${yDirection}px`);
+
+        container.appendChild(confetti);
+
+        // Remove the element after animation completes to clean up the DOM
+        confetti.addEventListener('animationend', () => {
+            confetti.remove();
+        });
+    }
+}
