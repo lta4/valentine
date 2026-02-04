@@ -82,10 +82,10 @@ yesBtn.addEventListener("click", () => {
 }
 
 function createConfetti(x, y) {
-    const colors = ["#ff5252", "#ffeb3b", "#4caf50", "#03a9f4", "#e91e63"];
+    const colors = ["#b90f0fff", "#ffeb3b", "#71e275ff", "#e91e63", "#db5ee7ff", "#6b51f0ff"];
     const container = document.getElementById('confetti-container');
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 60; i++) {
         const confetti = document.createElement('div');
         confetti.classList.add('confetti');
         confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
