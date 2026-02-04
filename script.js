@@ -5,7 +5,7 @@ const letter = document.getElementById("letter-container");
 const noBtn = document.querySelector(".no-btn");
 const yesBtn = document.querySelector(".btn[alt='Yes']");
 const title = document.getElementById("letter-title");
-const catImg = document.getElementById("letter-dog");
+const dogImg = document.getElementById("letter-dog");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
@@ -62,7 +62,7 @@ noBtn.addEventListener("mouseover", () => {
 yesBtn.addEventListener("click", () => {
     title.textContent = "Wooo Hoooooo!!!";
 
-    catImg.src = "fig-smile.gif";
+    dogImg.src = "fig-smile.gif";
 
     document.querySelector(".letter-window").classList.add("final");
 
