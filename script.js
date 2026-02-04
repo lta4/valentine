@@ -8,8 +8,11 @@ const title = document.getElementById("letter-title");
 const dogImg = document.getElementById("letter-dog");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
+const confettiBtn = document.getElementById("confetti-btn");
 
-// const confetti-btn = document.getElementById("confetti-btn");
+if (confettiBtn) {
+    confettiBtn.style.display = "none";
+}
 
 // Click Envelope
 
@@ -63,19 +66,20 @@ noBtn.addEventListener("mouseover", () => {
 
 yesBtn.addEventListener("click", () => {
     title.textContent = "Wooo Hoooooo!!!";
-
     dogImg.src = "fig-smile.gif";
-
     document.querySelector(".letter-window").classList.add("final");
-
     buttons.style.display = "none";
-
     finalText.style.display = "block";
+
+    if (confettiBtn) confettiBtn.style.display = "inline-block";
 })
 
-document.getElementById('confetti-btn').addEventListener('click', () => {
-    createConfetti(event.clientX, event.clientY);
-});
+    if (confettiBtn) {
+
+        confettiBtn.addEventListener('click', (e) => {
+        createConfetti(e.clientX, e.clientY);
+    });
+}
 
 function createConfetti(x, y) {
     const colors = ["#ff5252", "#ffeb3b", "#4caf50", "#03a9f4", "#e91e63"];
