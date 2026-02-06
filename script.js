@@ -65,7 +65,7 @@ noBtn.addEventListener("mouseover", () => {
 // YES is clicked
 
 yesBtn.addEventListener("click", () => {
-    title.textContent = "HOOOOOO RAAAAYYYYYY!!!";
+    title.textContent = "💜💜 I WUFF YOU!!!💜💜";
     dogImg.src = "fig-smile.gif";
     document.querySelector(".letter-window").classList.add("final");
     buttons.style.display = "none";
@@ -82,7 +82,7 @@ yesBtn.addEventListener("click", () => {
 }
 
 function createConfetti(x, y) {
-    const colors = ["#b90f0fff", "#ffeb3b", "#71e275ff", "#e91e63", "#db5ee7ff", "#6b51f0ff"];
+    const colors = ["#c8d634ff", "#43fe65ff", "#1a8ee7ff", "#f90154ff", "#db5ee7ff", "#913c9fff"];
     const container = document.getElementById('confetti-container');
 
     for (let i = 0; i < 60; i++) {
