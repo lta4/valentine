@@ -4,7 +4,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("heart-bg.jpg");
+    background-image: url("k-flowers.jpeg");
+    background-position: center;
+    background-size: cover;
     font-family: "Pixelify Sans", sans-serif;
 }
 

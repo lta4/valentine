@@ -65,7 +65,7 @@ noBtn.addEventListener("mouseover", () => {
 // YES is clicked
 
 yesBtn.addEventListener("click", () => {
-    title.textContent = "Wooo Hoooooo!!!";
+    title.textContent = "HOOOOOO RAAAAYYYYYY!!!";
     dogImg.src = "fig-smile.gif";
     document.querySelector(".letter-window").classList.add("final");
     buttons.style.display = "none";
